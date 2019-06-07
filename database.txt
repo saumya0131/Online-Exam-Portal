@@ -1,0 +1,32 @@
+mysql> use quiz_oops;
+Database changed
+
+mysql> create table signup(id int(11),name varchar(30),email varchar(30),pass varchar(30),img varchar(255));
+Query OK, 0 rows affected (1.35 sec)
+
+mysql> create table questions(id int(11) primary key,question varchar(100),ans1 varchar(80),ans2 varchar(80),ans3 varchar(80),ans4 varchar(80),ans int(4),cat_id int(4));
+Query OK, 0 rows affected (0.69 sec)
+
+mysql> create table category(id int(3) not null auto_increment primary key,cat_name varchar(30) not null);
+Query OK, 0 rows affected (1.19 sec)
+
+mysql> insert into category values(1,'php');
+Query OK, 1 row affected (0.13 sec)
+
+mysql> insert into category values(2,'html');
+Query OK, 1 row affected (0.36 sec)
+
+mysql> insert into category values(3,'css');
+Query OK, 1 row affected (0.12 sec)
+
+mysql> insert into category values(4,'javascript');
+Query OK, 1 row affected (0.16 sec)
+
+mysql> insert into category values(5,'jquery');
+Query OK, 1 row affected (0.24 sec)
+
+mysql> insert into category values(6,'bootstrap');
+Query OK, 1 row affected (0.64 sec)
+
+mysql> insert into questions values(1,'what does PHP stand for?','PHP hpertext processor','Private home page','personal hypertext processor','none of these',0,1);
+Query OK, 1 row affected (0.17 sec)
